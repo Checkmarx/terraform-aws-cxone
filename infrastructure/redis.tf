@@ -32,7 +32,7 @@ resource "aws_elasticache_replication_group" "redis" {
   transit_encryption_enabled = var.redis_auth_token != "" ? true : false #BUG - AST can't work with TLS enabled
   auth_token                 = var.redis_auth_token != "" ? var.redis_auth_token : null
 
-  kms_key_id                 = local.kms_arn
+  #kms_key_id                 = local.kms_arn
   at_rest_encryption_enabled = true
 
 

@@ -60,7 +60,7 @@ postgres_nodes = {
 # REDIS
 redis_nodes = {
   create             = true
-  instance_type      = "cache.t4g.medium"
+  instance_type      = "cache.t3.medium"
   number_of_shards   = 3
   replicas_per_shard = 1
 }

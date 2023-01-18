@@ -101,8 +101,8 @@ resource "aws_s3_bucket_policy" "uploads_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.uploads_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.uploads_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.uploads_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.uploads_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -207,8 +207,8 @@ resource "aws_s3_bucket_policy" "queries_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.queries_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.queries_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.queries_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.queries_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -313,8 +313,8 @@ resource "aws_s3_bucket_policy" "misc_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.misc_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.misc_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.misc_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.misc_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -419,8 +419,8 @@ resource "aws_s3_bucket_policy" "repostore_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.repostore_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.repostore_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.repostore_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.repostore_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -525,8 +525,8 @@ resource "aws_s3_bucket_policy" "sast_metadata_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.sast_metadata_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.sast_metadata_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sast_metadata_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sast_metadata_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -631,8 +631,8 @@ resource "aws_s3_bucket_policy" "scans_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.scans_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.scans_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.scans_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.scans_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -737,8 +737,8 @@ resource "aws_s3_bucket_policy" "sast_worker_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.sast_worker_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.sast_worker_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sast_worker_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sast_worker_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -843,8 +843,8 @@ resource "aws_s3_bucket_policy" "kics_worker_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.kics_worker_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.kics_worker_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.kics_worker_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.kics_worker_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -949,8 +949,8 @@ resource "aws_s3_bucket_policy" "sca_worker_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.sca_worker_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.sca_worker_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sca_worker_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.sca_worker_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1055,8 +1055,8 @@ resource "aws_s3_bucket_policy" "logs_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.logs_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.logs_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.logs_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.logs_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1161,8 +1161,8 @@ resource "aws_s3_bucket_policy" "engine_logs_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.engine_logs_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.engine_logs_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.engine_logs_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.engine_logs_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1267,8 +1267,8 @@ resource "aws_s3_bucket_policy" "reports_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.reports_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.reports_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.reports_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.reports_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1373,8 +1373,8 @@ resource "aws_s3_bucket_policy" "report_templates_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.report_templates_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.report_templates_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.report_templates_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.report_templates_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1479,8 +1479,8 @@ resource "aws_s3_bucket_policy" "configuration_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.configuration_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.configuration_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.configuration_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.configuration_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1585,8 +1585,8 @@ resource "aws_s3_bucket_policy" "imports_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.imports_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.imports_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.imports_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.imports_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1691,8 +1691,8 @@ resource "aws_s3_bucket_policy" "audit_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.audit_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.audit_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.audit_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.audit_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1803,8 +1803,8 @@ resource "aws_s3_bucket_policy" "source_resolver_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.source_resolver_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.source_resolver_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.source_resolver_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.source_resolver_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -1911,8 +1911,8 @@ resource "aws_s3_bucket_policy" "apisec_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.apisec_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.apisec_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.apisec_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.apisec_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -2017,8 +2017,8 @@ resource "aws_s3_bucket_policy" "kics_metadata_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.kics_metadata_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.kics_metadata_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.kics_metadata_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.kics_metadata_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -2123,8 +2123,8 @@ resource "aws_s3_bucket_policy" "redis_shared_bucket_permissive_access" {
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.redis_shared_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.redis_shared_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.redis_shared_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.redis_shared_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -2229,8 +2229,8 @@ resource "aws_s3_bucket_policy" "scan_results_storage_bucket_permissive_access" 
           "Principal": "*",
           "Action": "s3:*",
           "Resource": [
-            "arn:aws:s3:::${aws_s3_bucket.scan_results_storage_bucket.id}/*",
-            "arn:aws:s3:::${aws_s3_bucket.scan_results_storage_bucket.id}"
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.scan_results_storage_bucket.id}/*",
+            "arn:aws-us-gov:s3:::${aws_s3_bucket.scan_results_storage_bucket.id}"
           ],
           "Condition": {
             "Bool": {
@@ -2254,8 +2254,8 @@ resource "aws_iam_policy" "ast_s3_buckets_policy" {
         ],
         "Effect": "Allow",
         "Resource": [
-          "arn:aws:s3:::*${lower(local.s3_bucket_name_suffix)}",
-          "arn:aws:s3:::*${lower(local.s3_bucket_name_suffix)}/*"
+          "arn:aws-us-gov:s3:::*${lower(local.s3_bucket_name_suffix)}",
+          "arn:aws-us-gov:s3:::*${lower(local.s3_bucket_name_suffix)}/*"
         ]
       }
     ]

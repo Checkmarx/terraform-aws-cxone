@@ -37,7 +37,7 @@ module "rds-aurora" {
   apply_immediately                   = true
   skip_final_snapshot                 = true
   auto_minor_version_upgrade          = true
-  performance_insights_enabled        = true
+  performance_insights_enabled        = false
   iam_database_authentication_enabled = false
 
   master_username        = var.database_username
