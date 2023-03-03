@@ -25,6 +25,12 @@ sig = {
   existing_sig_k8s_to_dbs_id = ""
 }
 
+# IAM-ROLE
+iam_role = {
+  cloudops_arn = true
+  customer_arn = ""
+}
+
 # KMS
 kms = {
   create           = true
@@ -32,21 +38,7 @@ kms = {
 }
 
 # EKS
-eks_cluster_version = "1.21"
-coredns = {
-  resolve_conflicts = "OVERWRITE"
-  version           = ""
-}
-
-kubeproxy = {
-  resolve_conflicts = "OVERWRITE"
-  version           = ""
-}
-
-vpccni = {
-  resolve_conflicts = "OVERWRITE"
-  version           = ""
-}
+eks_cluster_version = "1.24"
 
 # RDS
 postgres_nodes = {
