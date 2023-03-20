@@ -45,4 +45,61 @@ module "eks" {
       local.sig_k8s_to_dbs_id
     ]
   }
+<<<<<<< Updated upstream
+=======
+
+  # aws-auth configmap
+  create_aws_auth_configmap = true
+  manage_aws_auth_configmap = true
+
+  aws_auth_roles = [
+    {
+      rolearn  = module.ast_default.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.ast_sast_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.ast_sast_medium_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.ast_sast_large_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.ast_sast_extra_large_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.ast_sast_xxl_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.kics_nodes_engines.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.minio_gateway_nodes.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+    {
+      rolearn  = module.repostore_nodes.iam_role_arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:bootstrappers", "system:nodes"]
+    },
+  ]
+
+  depends_on = [aws_kms_key.eks]
+>>>>>>> Stashed changes
 }

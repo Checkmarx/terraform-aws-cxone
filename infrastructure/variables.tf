@@ -644,6 +644,8 @@ variable "vpc" {
     nat_per_az                = bool
     single_nat                = bool
     existing_vpc_id           = string
+    existing_cidr_blocks = list(string)
+    existing_public_subnets   = list(string)
     existing_subnet_ids       = list(string)
     existing_db_subnets_group = string
     existing_db_subnets       = list(string)
@@ -659,10 +661,6 @@ variable "vpc_cidr" {
   description = "the main cidr of the vpc"
   type        = string
   default     = "10.1.0.0/16"
-  validation {
-    condition     = can(regex("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\\/([0-9]|[1-2][0-9]|3[0-2]))?$", var.vpc_cidr))
-    error_message = "Valid cidr is required. The subnet masking must be /21 ."
-  }
   nullable = false
 }
 

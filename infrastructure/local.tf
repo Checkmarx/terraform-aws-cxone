@@ -153,8 +153,8 @@ locals {
     },
   ]
 
-  private_subnets  = slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 0, 3)
-  public_subnets   = slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 6, 9)
-  database_subnets = slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 3, 6)
+  private_subnets  = var.vpc_cidr != "" ? slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 0, 3) : var.vpc.existing_subnet_ids
+  public_subnets   = var.vpc_cidr != "" ? slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 6, 9) : var.vpc.existing_public_subnets
+  database_subnets = var.vpc_cidr != "" ? slice(cidrsubnets(var.vpc_cidr, 2, 2, 2, 5, 5, 5, 6, 6, 6), 3, 6) : var.vpc.existing_db_subnets
 
 }

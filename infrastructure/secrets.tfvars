@@ -1,5 +1,5 @@
-database_username = ""
-database_password = ""
-database_name     = ""
+database_username = "root"
+database_password = "Cx123456"
+database_name     = "ast"
 
 redis_auth_token  = ""

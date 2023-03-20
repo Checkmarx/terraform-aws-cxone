@@ -7,12 +7,9 @@ module "internal_security_group" {
   description = "Internal security group for AST deployment called ${local.deployment_id}."
   vpc_id      = local.vpc_id
 
-  ingress_cidr_blocks = [
-  module.vpc.vpc_cidr_block]
-  ingress_rules = [
-  "all-all"]
-  egress_rules = [
-  "all-all"]
+  ingress_cidr_blocks = var.vpc.create ? [ module.vpc.vpc_cidr_block ] : concat(var.vpc.existing_cidr_blocks)
+  ingress_rules = [ "all-all" ]
+  egress_rules = [ "all-all" ]
 
   create = var.sig.create
 }
