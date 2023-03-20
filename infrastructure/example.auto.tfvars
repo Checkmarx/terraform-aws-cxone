@@ -36,7 +36,7 @@ iam_role = {
 # KMS
 kms = {
   create           = false
-  existing_kms_arn = "arn:aws:kms:eu-west-1:941355383184:key/4ecee642-7047-467f-ba19-9b5c03aba45f"
+  existing_kms_arn = ""
 }
 
 # EKS
