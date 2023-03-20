@@ -52,7 +52,7 @@ vpccni = {
 
 # RDS
 postgres_nodes = {
-  create              = false
+  create              = true
   auto_scaling_enable = false
   count               = 1
   max_count           = 0
@@ -61,7 +61,7 @@ postgres_nodes = {
 
 # REDIS
 redis_nodes = {
-  create             = false
+  create             = true
   instance_type      = "cache.m6g.large"
   number_of_shards   = 3
   replicas_per_shard = 1
