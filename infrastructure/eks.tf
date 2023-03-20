@@ -7,8 +7,8 @@ module "eks" {
 
   cluster_enabled_log_types = ["audit", "api", "authenticator", "scheduler"]
 
-  cluster_endpoint_private_access = true
-  cluster_endpoint_public_access  = true
+  cluster_endpoint_private_access = var.enable_private_endpoint
+  cluster_endpoint_public_access  = var.enable_public_endpoint
 
   vpc_id     = local.vpc_id
   subnet_ids = local.subnets
@@ -46,11 +46,6 @@ module "eks" {
   manage_aws_auth_configmap = true
 
   aws_auth_roles = [
-    # {
-    #   rolearn  = "${var.iam_role.cloudops_arn}" == true ? element(tolist(data.aws_iam_roles.cloudops_iam_role.arns),0) : aws_iam_role.customer_iam_role[0].arn
-    #   username = "AWSAdministratorAccess:{{SessionName}}"
-    #   groups   = ["system:masters"]
-    # },
     {
       rolearn  = module.ast_default.iam_role_arn
       username = "system:node:{{EC2PrivateDNSName}}"
