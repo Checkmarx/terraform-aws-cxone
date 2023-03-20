@@ -10,8 +10,8 @@ module "eks" {
 
   cluster_enabled_log_types = ["audit", "api", "authenticator", "scheduler"]
 
-  cluster_endpoint_private_access = true
-  cluster_endpoint_public_access  = true
+  cluster_endpoint_private_access = var.enable_private_endpoint
+  cluster_endpoint_public_access  = var.enable_public_endpoint
 
   vpc_id     = local.vpc_id
   subnet_ids = local.subnets
@@ -45,8 +45,6 @@ module "eks" {
       local.sig_k8s_to_dbs_id
     ]
   }
-<<<<<<< Updated upstream
-=======
 
   # aws-auth configmap
   create_aws_auth_configmap = true
@@ -101,5 +99,4 @@ module "eks" {
   ]
 
   depends_on = [aws_kms_key.eks]
->>>>>>> Stashed changes
 }

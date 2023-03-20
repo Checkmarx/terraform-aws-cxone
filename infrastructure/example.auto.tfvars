@@ -13,12 +13,12 @@ vpc = {
   create                    = false
   single_nat                = false
   nat_per_az                = false
-  existing_cidr_blocks = [ "" ]
+  existing_cidr_blocks      = [""]
   existing_vpc_id           = ""
-  existing_public_subnets  = [  ]
-  existing_subnet_ids       = [  ]
+  existing_public_subnets   = []
+  existing_subnet_ids       = []
   existing_db_subnets_group = ""
-  existing_db_subnets       = [  ]
+  existing_db_subnets       = []
 }
 
 # Security

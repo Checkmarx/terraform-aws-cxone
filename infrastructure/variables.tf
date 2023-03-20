@@ -37,6 +37,16 @@ variable "environment" {
   nullable = false
 }
 
+variable "enable_private_endpoint" {
+  type    = bool
+  default = true
+}
+
+variable "enable_public_endpoint" {
+  type    = bool
+  default = false
+}
+
 variable "owner" {
   description = "the name of the deployment owner. for example: ast-team"
   type        = string
@@ -644,7 +654,7 @@ variable "vpc" {
     nat_per_az                = bool
     single_nat                = bool
     existing_vpc_id           = string
-    existing_cidr_blocks = list(string)
+    existing_cidr_blocks      = list(string)
     existing_public_subnets   = list(string)
     existing_subnet_ids       = list(string)
     existing_db_subnets_group = string
@@ -661,7 +671,7 @@ variable "vpc_cidr" {
   description = "the main cidr of the vpc"
   type        = string
   default     = "10.1.0.0/16"
-  nullable = false
+  nullable    = false
 }
 
 # Security groups
